@@ -1,0 +1,65 @@
+name: task_management_system
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  #for model generation
+  json_annotation:
+  #routing:
+  go_router:
+  #Dart equality
+  equatable:
+  #Functional Programming
+  dartz:
+  #for state management
+  bloc:
+  flutter_bloc: ^8.1.5
+  #to check the network connectivity
+  connectivity_plus: ^5.0.2
+  #for dependency injection
+  get_it: ^7.7.0
+  intl: ^0.19.0
+  #for generating secure 3rd party credentials i.e google api key, api base url etc.
+  envied:
+  firebase_core:
+  cloud_firestore: ^4.17.3
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner:
+
+  #for generating model generation
+  json_serializable:
+  #for generating secure 3rd party credentials
+  envied_generator:
+
+flutter:
+
+  uses-material-design: true
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+generate: true
