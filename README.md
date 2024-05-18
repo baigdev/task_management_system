@@ -1,16 +1,41 @@
-# task_management_system
+# Task Management System
 
-A new Flutter project.
+A Task Management System built with Flutter, implementing Clean Architecture and Test-Driven Development (TDD) principles. The project uses GetIt for dependency injection and Bloc/Cubit for state management. Tasks are stored both online using Firestore and offline using `sqflite`.
 
-## Getting Started
+## Table of Contents
 
-This project is a starting point for a Flutter application.
+- [Features](#features)
+- [Architecture](#architecture)
+- [State Management](#state-management)
+- [Dependency Injection](#dependency-injection)
+- [Offline and Online Support](#offline-and-online-support)
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Add new tasks
+- Delete tasks
+- View a list of tasks
+- Delete tasks from both server and local storage
+- Edit tasks from both server and local storage
+- Persist tasks with Firestore
+- Offline storage with `sqflite` to ensure tasks are available without an internet connection
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Architecture
+
+This project follows the principles of Clean Architecture to maintain a scalable, testable, and maintainable codebase. The architecture is divided into the following layers:
+
+- **Presentation Layer**: Contains UI code and state management (Bloc/Cubit).
+- **Domain Layer**: Contains business logic and entities.
+- **Data Layer**: Contains data sources, repositories, and models.
+
+## State Management
+
+State management is handled using the Bloc/Cubit library, which provides a predictable state management solution. The app uses Blocs and Cubits to manage state changes and handle business logic.
+
+## Dependency Injection
+
+The project uses GetIt for dependency injection, making it easier to manage dependencies and improve testability. The `get_it` package is used to register and resolve dependencies throughout the app.
+
+## Offline and Online Support
+
+The app uses Firestore for online data persistence and `sqflite` for offline storage. This ensures that tasks are available to the user even when there is no internet connection. The app synchronizes data between the online and offline databases.
