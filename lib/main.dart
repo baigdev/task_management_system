@@ -17,15 +17,6 @@ import 'utils/navigation/go_router_navigation_delegate.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  // For live we store these credentials in env files, for now I have just assign these secret keys here directly.
-  await Firebase.initializeApp(
-      options: const FirebaseOptions(
-    apiKey: 'AIzaSyCYd9XEVk050jwHqVrmtS3agrpwgCvzD3g',
-    appId: '1:483803866337:android:221cd32e53253dc0e903a0',
-    messagingSenderId: 'sendid',
-    projectId: 'task-management-system-8cd52',
-    storageBucket: 'task-management-system-8cd52.appspot.com',
-  ));
   ApiRoutes.kBaseUrl = "";
   Bloc.observer = CustomBlocObserver();
   di.initializeDependencies();
